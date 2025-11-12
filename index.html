@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Advanced Calculator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="calculator" aria-label="Advanced calculator">
+      <div class="topbar">
+        <div class="brand">Scientific Calculator</div>
+
+        <div class="mode-toggle">
+          <span class="muted" style="font-size:13px;color:#6b7280">Angle:</span>
+          <div id="degRad" class="toggle deg" data-label="DEG" role="switch" aria-checked="true" tabindex="0">
+            <div class="knob"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="display-wrap">
+        <input id="expression" class="expression" placeholder="Enter expression" />
+        <input id="result" class="result" placeholder="Result" disabled />
+      </div>
+
+      <div class="buttons">
+        <button class="muted" data-key="MC">MC</button>
+        <button class="muted" data-key="MR">MR</button>
+        <button class="muted" data-key="M+">M+</button>
+        <button class="muted" data-key="M-">M-</button>
+        <button class="secondary" data-key="CE">CE</button>
+        <button class="warn" data-key="AC">AC</button>
+
+        <button class="secondary" data-insert="(">(</button>
+        <button class="secondary" data-insert=")">)</button>
+        <button class="secondary" data-key="%">%</button>
+        <button class="secondary" data-key="BACK">⌫</button>
+        <button class="op" data-insert="/">÷</button>
+        <button class="op" data-insert="*">×</button>
+
+        <button class="secondary" data-fn="sin">sin</button>
+        <button class="secondary" data-fn="cos">cos</button>
+        <button class="secondary" data-fn="tan">tan</button>
+        <button class="secondary" data-fn="log">log</button>
+        <button class="secondary" data-fn="ln">ln</button>
+        <button class="secondary" data-insert="^">xʸ</button>
+
+        <button data-insert="7">7</button>
+        <button data-insert="8">8</button>
+        <button data-insert="9">9</button>
+        <button class="secondary" data-fn="inv">1/x</button>
+        <button class="secondary" data-fn="sq">x²</button>
+        <button class="secondary" data-fn="cube">x³</button>
+
+        <button data-insert="4">4</button>
+        <button data-insert="5">5</button>
+        <button data-insert="6">6</button>
+        <button class="secondary" data-fn="sqrt">√</button>
+        <button class="secondary" data-fn="cuberoot">∛</button>
+        <button class="op" data-insert="-">−</button>
+
+        <button data-insert="1">1</button>
+        <button data-insert="2">2</button>
+        <button data-insert="3">3</button>
+        <button class="secondary" data-fn="fact">n!</button>
+        <button class="equal wide-2" data-key="=">=</button>
+        <button class="op" data-insert="+">+</button>
+
+        <button class="wide-2" data-insert="0">0</button>
+        <button data-insert="00">00</button>
+        <button data-insert=".">.</button>
+        <button class="secondary" data-key="SIGN">±</button>
+        <button class="secondary" data-const="PI">π</button>
+        <button class="secondary" data-const="E">e</button>
+      </div>
+
+      <div class="credit">Created by <strong>Naman R Srivastava</strong></div>
+    </div>
+
+    <div class="history" aria-label="calculation history">
+      <h4>History (click to reuse)</h4>
+      <div id="hist" class="hist-list"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
